@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>New order</title>
+</head>
+<body>
+    <form method="POST" >
+        <fieldset>
+            <h1>Add new order:</h1>
+            <select name="type">
+                <option disabled>Choose order type:</option>
+                <option value="Sell">Sell</option>
+                <option value="Buy">Buy</option>
+            </select>
+            <br>
+            <label class='answer_text_style'>
+                <input type="number" name="price" required="required">
+                Price:
+            </label>
+            <br>
+            <label class='answer_text_style'>
+                <input type="number" name="quantity" required="required">
+                Quantity:
+            </label>
+            <p>
+                <input type="submit" value="Add">
+            </p>
+        </fieldset>
+    </form>
+    <a href="/">Back</a>
+</body>
+</html>

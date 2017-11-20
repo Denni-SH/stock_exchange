@@ -1,8 +1,8 @@
 from tornado import web, ioloop, options
 from tornado.options import parse_command_line, define
 import tornado
-import handlers
 import os
+import handlers
 
 base_dir = os.path.dirname(__file__)
 port = 8888
@@ -12,7 +12,7 @@ def run_server():
     parse_command_line()
     app =  tornado.web.Application([
         (r"/", handlers.MainHandler),
-        (r"/new_order", handlers.MainHandler),
+        (r"/new_order", handlers.AddOrder),
         (r"/status/(?P<pk>\d+)", handlers.MainHandler),
     ],
     debug = True,
